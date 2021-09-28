@@ -1,0 +1,15 @@
+[theme="login"] {
+  --primary-background: white; 
+  --accent-background: forestgreen;
+  --light-accent: lighten(--accent-background, 50%);
+}
+[theme="specials"] {
+  --primary-background: white; 
+  --accent-background: forestgreen;
+  --light-accent: lighten(--accent-background, 50%);
+}
+[theme="strains"] {
+  --primary-background: white; 
+  --accent-background: royalblue;
+  --light-accent: lighten(--accent-background, 50%);
+}
