@@ -6,7 +6,7 @@ import { createStore } from 'vuex';
 const store = createStore({
   state() {
     return {
-      productionSpecialsApi: false,
+      productionSpecialsApi: true,
       productionStrainsApi: false,
       pageCategory: 'Current',
       storeLocation: 'all',
@@ -67,6 +67,8 @@ const store = createStore({
         }
       })
       .then(data => {
+        if (this.productionSpecialsApi) {console.log('connecting to production server')}
+        else {console.log('connecting to dev server')}
         console.log(`data`)
         console.log(data)
         console.log(new Date())
@@ -100,7 +102,7 @@ const store = createStore({
   getters: {
     specialsUrl(state) {
       return state.productionSpecialsApi 
-      ? ''
+      ? 'http://138.68.240.44/specials/'
       : 'http://192.168.1.2:8000/specials/'
     },
     strainsUrl(state) {
