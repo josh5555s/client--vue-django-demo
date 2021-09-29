@@ -102,7 +102,7 @@ const store = createStore({
   getters: {
     specialsUrl(state) {
       return state.productionSpecialsApi 
-      ? 'http://138.68.240.44/specials/'
+      ? 'https://138.68.240.44/specials/'
       : 'http://192.168.1.2:8000/specials/'
     },
     strainsUrl(state) {
