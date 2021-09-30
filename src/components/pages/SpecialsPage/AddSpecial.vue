@@ -159,12 +159,14 @@ export default {
           this.$emit('error-modal')
           return
         }
+        // address the below if statements, why do they exist?
       if (this.storeLocation !== 'all') {
         this.locationsInput = [`${this.storeLocation}`]
       }
       if (this.specialsUrl === 'http://192.168.1.2:8000/specials/') {
         this.locationsInput = `${this.locationsInput}`
       }
+      this.locationsInput = this.locationsInput.join(',')
       fetch(this.specialsUrl, {
         method: 'POST',
         accept: 'application/json',
