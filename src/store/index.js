@@ -7,7 +7,6 @@ const store = createStore({
   state() {
     return {
       productionSpecialsApi: true,
-      productionStrainsApi: false,
       pageCategory: 'Current',
       storeLocation: 'all',
       specials: [],
@@ -104,11 +103,6 @@ const store = createStore({
       return state.productionSpecialsApi 
       ? 'https://api.joshshindler.com/specials/'
       : 'http://192.168.1.2:8000/specials/'
-    },
-    strainsUrl(state) {
-      return state.productionStrainsApi 
-      ? ''
-      : ''
     },
     pageCategory(state) {
       return state.pageCategory

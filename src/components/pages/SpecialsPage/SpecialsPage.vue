@@ -157,10 +157,6 @@ export default {
   text-align: center;
 }
 
-add-special {
-  position: sticky;
-  top: 200px;
-}
 
 .body-container {
   display: flex;
@@ -192,6 +188,15 @@ label {
   border-radius: 5px;
 }
 
+@media (min-width: 1280px) {
+
+  .inner-add-container {
+    position: sticky;
+    top: 113px;
+  }
+
+}
+
 /* move to single column*/
 @media screen and (max-width: 1280px) {
 
@@ -200,31 +205,14 @@ label {
     width: 95vw;
   }
 
-  #display-title {
-    margin-top: 0;
-  }
-
   .body-container {
     flex-direction: column;
   }
 
   .add-container, .show-container {
-    /* width: 300px; */
     display: flex;
     justify-content: center;
   }
 
-
-  /* @media screen and (max-width: 800px) {
-    .title {
-      position: initial;
-      width: 95vw;
-    }
-
-    .inner-add-container,
-    .inner-show-container {
-      width: 95vw;
-    }
-  } */
 }
 </style>
